@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #222;
+            font-family: system-ui;
+        }
+        
+        .box {
+            width: 75px;
+            height: 75px;
+            border-radius: 12px;
+            background-color: #09f;
+            margin-bottom: 5px;
+            &.purple {
+                background: rebeccapurple;
+            }
+            &.yellow {
+                background: rgb(246, 246, 124);
+            }
+        }
+        
+        #log {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box blue"></div>
+    <div class="box purple"></div>
+    <div class="box yellow"></div>
+
+    <footer>
+        <button id="play">Reproducir</button>
+        <button id="pause">Pausar</button>
+        <button id="resume">Reanudar</button>
+        <button id="reverse">Revertir</button>
+        <button id="restart">Reiniciar</button>
+    </footer>
+    <small id="log"></small>
+
+    <!-- Loading GSAP library -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script>
+        const tl = gsap.timeline({
+            defaults: {
+                duration: 2
+            },
+            onComplete: () => {
+                window.log.innerHTML += "[event] complete <br>"
+            },
+            onStart: () => {
+                window.log.innerHTML += "[event] start <br>"
+            },
+            onRepeat: () => {
+                window.log.innerHTML += "[event] repeat <br>"
+            }
+        });
+
+        tl
+            .to('.box.blue', {
+                x: 200,
+            })
+            .to('.box.purple', {
+                y: -80,
+            }, 2)
+            .to('.box.yellow', {
+                y: -160,
+                x: 100,
+            }, 3)
+
+        window.play.onclick = () => {
+            tl.play()
+            window.log.innerHTML += "play <br>"
+        }
+
+        window.pause.onclick = () => {
+            tl.pause()
+            window.log.innerHTML += "pause <br>"
+        }
+        window.resume.onclick = () => {
+            tl.resume()
+            window.log.innerHTML += "resume <br>"
+        }
+        window.reverse.onclick = () => {
+            tl.reverse()
+            window.log.innerHTML += "reverse <br>"
+        }
+        window.restart.onclick = () => {
+            tl.restart()
+            window.log.innerHTML += "restart <br>"
+        }
+    </script>
+</body>
+
+</html>
