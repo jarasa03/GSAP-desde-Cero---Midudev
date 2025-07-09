@@ -33,6 +33,9 @@ Throughout the project, we'll cover:
 | 03 | [`03-grid-animations.html`](./03-grid-animations.html) | Animate grid-based image galleries with staggered effects that start from different origins: center, random, and edges |
 | 04 | [`04-easing.html`](./04-easing.html) | Explore different GSAP easing functions applied to repeated tweens with rotation, scale, and bounce/back/steps effects |
 | 05 | [`05-timeline.html`](./05-timeline.html) | Create a timeline with sequential animations for different elements using shared default properties |
+| 06 | [`06-position-parameters.html`](./06-position-parameters.html) | Use GSAP timeline position parameters to overlap or delay animations relative to each other |
+| 07 | [`07-control-animations-with-callbacks.html`](./07-control-animations-with-callbacks.html) | Control animation flow with buttons and use timeline callbacks like `onStart`, `onComplete`, and `onRepeat` to track behavior |
+
 
 
 > More lessons will be added as the course progresses.
