@@ -31,6 +31,8 @@ Throughout the project, we'll cover:
 | 01 | [`01-first-tweens-with-multiple-elements.html`](./01-first-tweens-with-multiple-elements.html) | Animate multiple `.box` elements individually using `gsap.to()` with incremental `delay` |
 | 02 | [`02-staggered-animations-and-yoyo.html`](./02-staggered-animations-and-yoyo.html) | Animate mirrored elements using true `stagger`, rotation, scaling, and infinite looping with `yoyo` |
 | 03 | [`03-grid-animations.html`](./03-grid-animations.html) | Animate grid-based image galleries with staggered effects that start from different origins: center, random, and edges |
+| 04 | [`04-easing.html`](./04-easing.html) | Explore different GSAP easing functions applied to repeated tweens with rotation, scale, and bounce/back/steps effects |
+
 
 > More lessons will be added as the course progresses.
 
