@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #222;
+            font-family: system-ui;
+        }
+        
+        h1 {
+            color: white;
+            text-wrap: balance;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="tit1">El código es poesía, pero también puede ser magia visual con GSAP</h1>
+    <h1 id="tit2">El código es poesía, pero también puede ser magia visual con GSAP</h1>
+    <h1 id="tit3">El código es poesía, pero también puede ser magia visual con GSAP</h1>
+
+    <!-- Loading GSAP library -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <!-- Loading GSAP plugin SplitText -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+
+    <script>
+        // Plugin register
+        gsap.registerPlugin(SplitText)
+
+        const split1 = new SplitText(document.getElementById("tit1"), {
+            type: "lines"
+        })
+
+        const split2 = new SplitText(document.getElementById("tit2"), {
+            type: "words"
+        })
+
+        const split3 = new SplitText(document.getElementById("tit3"), {
+            type: "chars"
+        })
+
+        gsap.from(split1.lines, {
+            duration: 1,
+            y: 25,
+            stagger: .5,
+            autoAlpha: 0 // 'autoAlpha' combines opacity and visibility: hides the element completely and fades it in
+        })
+
+        gsap.from(split2.words, {
+            duration: 1,
+            y: 25,
+            stagger: .2,
+            autoAlpha: 0 // 'autoAlpha' combines opacity and visibility: hides the element completely and fades it in
+        })
+
+        gsap.from(split3.chars, {
+            duration: .2,
+            y: 25,
+            stagger: .05,
+            autoAlpha: 0 // 'autoAlpha' combines opacity and visibility: hides the element completely and fades it in
+        })
+    </script>
+</body>
+
+</html>
