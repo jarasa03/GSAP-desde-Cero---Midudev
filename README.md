@@ -35,10 +35,11 @@ Throughout the project, we'll cover:
 | 05 | [`05-timeline.html`](./05-timeline.html) | Create a timeline with sequential animations for different elements using shared default properties |
 | 06 | [`06-position-parameters.html`](./06-position-parameters.html) | Use GSAP timeline position parameters to overlap or delay animations relative to each other |
 | 07 | [`07-control-animations-with-callbacks.html`](./07-control-animations-with-callbacks.html) | Control animation flow with buttons and use timeline callbacks like `onStart`, `onComplete`, and `onRepeat` to track behavior |
-
-
-
-> More lessons will be added as the course progresses.
+| 08 | [`08-split-text.html`](./08-split-text.html) | Animate lines of text using the `SplitText` plugin for line-based stagger effects |
+| 09 | [`09-linear-web.html`](./09-linear-web.html) | Create a Linear-style smooth scroll text appearance effect |
+| 10 | [`10-scroll-trigger-and-text-animation.html`](./10-scroll-trigger-and-text-animation.html) | Combine `ScrollTrigger` with `SplitText` to animate text as it scrolls into view |
+| 11 | [`11-scroll-reverse-engineering.html`](./11-scroll-reverse-engineering.html) | Reverse-engineer scroll-based animations with canvas and image sequences |
+| 12 | [`12-apple-scroll-trigger-animations.html`](./12-apple-scroll-trigger-animations.html) | Apple-style AirPods animation using scroll-based canvas rendering |
 
 ## 🔧 Setup
 
