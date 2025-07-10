@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #222;
+            font-family: system-ui;
+        }
+        
+        h1 {
+            color: white;
+            text-wrap: balance;
+            text-align: center;
+            position: fixed;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 15vw;
+            width: 100%;
+        }
+        
+        body {
+            height: 2000px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="title">Airpods Pro</h1>
+
+    <!-- Loading GSAP library -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <!-- Loading GSAP plugin SplitText -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+
+    <!-- Loading GSAP plugin SplitText -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+    <script>
+        // Plugin register
+        gsap.registerPlugin(SplitText)
+        gsap.registerPlugin(ScrollTrigger)
+
+        gsap.to(".title", {
+            scale: 1.5,
+            autoAlpha: 0,
+            scrollTrigger: {
+                scrub: .5, // smoothly ties the animation to the scroll, so it progresses as you scroll
+                start: "150px",
+                end: "600px"
+            }
+        })
+    </script>
+</body>
+
+</html>
